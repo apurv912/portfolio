@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apurv Adarsh — Product Manager</title>
+<meta name="description" content="PM specialising in internal tools, ops automation, and GenAI products. Ex-Amazon PM intern. HHL MBA.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;color-scheme:light}
+:root{
+  --bg:#f0f4f8;
+  --surface:#ffffff;
+  --raised:#e8edf3;
+  --card:#ffffff;
+  --ink:#0d1b2a;
+  --mid:#3d5166;
+  --soft:#6b8299;
+  --faint:#b0c2d4;
+  --border:#dce6ef;
+  --border-hover:#8aaac4;
+
+  --blue:#1a6fb5;
+  --blue-l:#e8f2fb;
+  --blue-t:#0d3d68;
+  --blue-b:#1560a0;
+  --blue-mid:#2980c8;
+
+  --amazon:#e47911;
+  --amazon-l:#fff5e6;
+  --amazon-t:#7a3800;
+  --amazon-b:#c96d0a;
+
+  --teal:#0e9373;
+  --teal-l:#e2f5ef;
+  --teal-t:#064d3b;
+  --teal-b:#0a7560;
+
+  --purple:#5046a8;
+  --purple-l:#eeedfc;
+  --purple-t:#2d2870;
+
+  --metric:#0d3d68;
+  --r:14px;
+  --r-sm:8px;
+}
+body{
+  font-family:'Inter',sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  font-size:16px;
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--blue);text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* ── NAV ── */
+nav{
+  position:sticky;top:0;z-index:100;
+  background:rgba(255,255,255,0.95);
+  backdrop-filter:blur(16px);
+  -webkit-backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--border);
+  box-shadow:0 1px 0 rgba(13,59,104,.06);
+}
+.nav-inner{
+  max-width:1100px;margin:0 auto;padding:0 28px;
+  height:60px;display:flex;align-items:center;justify-content:space-between;
+}
+.nav-logo{
+  font-family:'DM Mono',monospace;font-size:13px;font-weight:500;
+  color:var(--blue);letter-spacing:.03em;
+}
+.nav-links{display:flex;gap:4px;align-items:center}
+.nav-link{
+  font-size:14px;color:var(--mid);padding:7px 12px;border-radius:8px;
+  transition:background .15s,color .15s;cursor:pointer;font-weight:400;
+}
+.nav-link:hover{background:var(--raised);color:var(--ink)}
+.nav-cta{
+  font-size:12px;font-weight:600;color:var(--blue-t);
+  background:var(--blue-l);border:1px solid var(--blue-b);
+  border-radius:7px;padding:7px 16px;margin-left:8px;
+  transition:background .15s;
+}
+.nav-cta:hover{background:#d4e8f7;text-decoration:none}
+
+/* ── LAYOUT ── */
+.page{max-width:1100px;margin:0 auto;padding:0 28px}
+
+/* ── HERO ── */
+.hero{padding:100px 0 84px}
+.hero-kicker{
+  font-family:'DM Mono',monospace;font-size:11px;font-weight:500;
+  color:var(--blue);letter-spacing:.16em;text-transform:uppercase;
+  display:flex;align-items:center;gap:10px;margin-bottom:24px;
+}
+.hero-kicker::before{content:'';display:inline-block;width:28px;height:2px;background:var(--blue)}
+.hero-name{
+  font-family:'DM Serif Display',serif;
+  font-size:clamp(44px,6.5vw,72px);
+  font-weight:400;line-height:1.0;letter-spacing:-.025em;
+  margin-bottom:14px;color:var(--ink);
+}
+.hero-name em{font-style:italic;color:var(--blue)}
+.hero-role{
+  font-size:19px;color:var(--mid);font-weight:400;
+  margin-bottom:20px;letter-spacing:.01em;
+}
+.hero-bio{
+  max-width:580px;font-size:16px;color:var(--mid);
+  line-height:1.8;margin-bottom:40px;
+}
+.hero-bio strong{color:var(--ink);font-weight:600}
+
+/* ── METRIC STRIP ── */
+.metrics{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:12px;margin-bottom:40px;
+}
+.m-card{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:var(--r);padding:20px 22px;
+  box-shadow:0 1px 3px rgba(13,59,104,.07);
+}
+.m-num{
+  font-family:'DM Mono',monospace;font-size:22px;font-weight:500;
+  color:var(--metric);line-height:1.1;margin-bottom:5px;
+}
+.m-label{font-size:12px;color:var(--soft);line-height:1.45}
+
+.hero-actions{display:flex;gap:10px;flex-wrap:wrap}
+.btn{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:14px;font-weight:500;padding:10px 22px;
+  border-radius:8px;cursor:pointer;
+  transition:all .15s;text-decoration:none;
+}
+.btn-dark{background:var(--ink);color:#fff;border:1px solid var(--ink)}
+.btn-dark:hover{opacity:.82;text-decoration:none}
+.btn-outline{background:var(--surface);color:var(--ink);border:1px solid var(--border-hover)}
+.btn-outline:hover{border-color:var(--ink);text-decoration:none}
+
+/* ── SECTION ── */
+.section{padding:80px 0;border-top:1px solid var(--border)}
+.sec-head{
+  display:flex;align-items:baseline;justify-content:space-between;
+  margin-bottom:36px;
+}
+.sec-label{
+  font-family:'DM Mono',monospace;font-size:11px;font-weight:600;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--ink);
+}
+.sec-count{font-family:'DM Mono',monospace;font-size:11px;color:var(--soft)}
+
+/* ── WORK CARDS ── */
+.work-stack{display:flex;flex-direction:column;gap:14px}
+.work-card{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:var(--r);padding:26px 30px;
+  transition:border-color .2s,transform .15s,box-shadow .2s;
+  box-shadow:0 1px 4px rgba(13,59,104,.07);
+}
+.work-card:hover{border-color:var(--blue-b);transform:translateY(-2px);box-shadow:0 6px 20px rgba(13,59,104,.1)}
+.wc-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:12px}
+.wc-tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
+.tag{
+  font-family:'DM Mono',monospace;font-size:10px;font-weight:600;
+  padding:3px 10px;border-radius:5px;letter-spacing:.05em;text-transform:uppercase;
+}
+.t-co-am{background:var(--amazon-l);color:var(--amazon-t);border:1px solid #f0c080}
+.t-co-dxc{background:#e6f0fb;color:#09407a;border:1px solid #a8c8f0}
+.t-co-ss{background:var(--purple-l);color:var(--purple-t);border:1px solid #c8c4f0}
+.t-type{background:var(--raised);color:var(--soft);border:1px solid var(--border)}
+.wc-title{
+  font-family:'DM Serif Display',serif;font-size:22px;font-weight:400;
+  color:var(--ink);margin-bottom:8px;line-height:1.2;
+}
+.wc-desc{font-size:14px;color:var(--mid);line-height:1.7;margin-bottom:16px}
+.wc-metrics{
+  display:flex;gap:28px;flex-wrap:wrap;
+  padding-top:16px;border-top:1px solid var(--border);
+}
+.wc-m{display:flex;flex-direction:column}
+.wc-mn{font-family:'DM Mono',monospace;font-size:15px;font-weight:600;color:var(--metric)}
+.wc-ml{font-size:11px;color:var(--soft);margin-top:2px}
+.wc-arrow{
+  font-size:18px;color:var(--faint);flex-shrink:0;
+  transition:color .15s;margin-top:2px;cursor:pointer;
+  user-select:none;
+}
+.work-card:hover .wc-arrow{color:var(--blue)}
+
+/* expanded detail */
+.wc-detail{display:none;margin-top:18px;padding-top:18px;border-top:1px solid var(--border)}
+.wc-detail.open{display:block}
+.wc-detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.det-label{
+  font-family:'DM Mono',monospace;font-size:10px;font-weight:600;
+  text-transform:uppercase;letter-spacing:.1em;color:var(--blue);margin-bottom:10px;
+}
+.det-body{font-size:14px;color:var(--mid);line-height:1.7}
+.det-body li{margin-left:18px;margin-bottom:6px}
+.risk-list{display:flex;flex-direction:column;gap:7px}
+.risk-item{
+  font-size:13px;color:var(--mid);padding:9px 13px;
+  background:var(--raised);border-radius:7px;
+  border-left:3px solid var(--blue);line-height:1.5;
+}
+
+/* ── AMAZON HIGHLIGHT CARD ── */
+.amazon-card{
+  background:var(--surface);
+  border:2px solid var(--amazon-b);
+  border-radius:var(--r);
+  overflow:hidden;
+  box-shadow:0 4px 20px rgba(228,121,17,.12),0 1px 4px rgba(13,59,104,.08);
+}
+.amazon-hero-bar{
+  background:linear-gradient(135deg,#fff8f0 0%,#fff3e3 100%);
+  border-bottom:1px solid #f0c080;
+  padding:28px 32px 24px;
+}
+.amazon-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--amazon-l);border:1px solid var(--amazon-b);
+  border-radius:6px;padding:5px 12px;
+  font-family:'DM Mono',monospace;font-size:10px;font-weight:700;
+  color:var(--amazon-t);letter-spacing:.08em;text-transform:uppercase;
+  margin-bottom:14px;
+}
+.amazon-badge::before{
+  content:'★';font-size:11px;color:var(--amazon);
+}
+.amazon-title{
+  font-family:'DM Serif Display',serif;font-size:24px;font-weight:400;
+  color:var(--ink);line-height:1.2;margin-bottom:10px;
+}
+.amazon-desc{
+  font-size:14px;color:var(--mid);line-height:1.75;max-width:660px;margin-bottom:20px;
+}
+.amazon-metrics{display:flex;gap:10px;flex-wrap:wrap;}
+.am-stat{
+  background:var(--surface);border:1px solid #f0c080;
+  border-radius:10px;padding:12px 18px;min-width:100px;
+  box-shadow:0 1px 3px rgba(228,121,17,.08);
+}
+.am-sn{font-family:'DM Mono',monospace;font-size:20px;font-weight:600;color:var(--amazon-t);line-height:1.1}
+.am-sl{font-size:11px;color:var(--amazon-t);opacity:.7;margin-top:3px}
+
+/* phase rows */
+.phase-row{border-bottom:1px solid var(--border)}
+.phase-row:last-child{border-bottom:none}
+.phase-head{
+  display:flex;align-items:center;gap:14px;
+  padding:18px 32px;cursor:pointer;
+  transition:background .15s;user-select:none;
+}
+.phase-head:hover{background:#fdf6ee}
+.phase-num{
+  font-family:'DM Mono',monospace;font-size:10px;font-weight:700;
+  color:var(--amazon-t);background:var(--amazon-l);border:1px solid var(--amazon-b);
+  border-radius:5px;padding:3px 9px;flex-shrink:0;letter-spacing:.05em;
+}
+.phase-title{font-size:15px;font-weight:500;color:var(--ink);flex:1}
+.phase-meta{font-size:12px;color:var(--soft);margin-right:10px}
+.phase-chev{font-size:12px;color:var(--faint);transition:transform .22s;flex-shrink:0}
+.phase-body{display:none;padding:4px 32px 28px;}
+
+.phase-narrative{font-size:14px;color:var(--mid);line-height:1.8}
+.phase-narrative p{margin-bottom:12px}
+.phase-narrative p:last-child{margin-bottom:0}
+.phase-narrative strong{color:var(--ink);font-weight:600}
+
+.phase-two-col{display:grid;grid-template-columns:3fr 2fr;gap:28px}
+.phase-box{
+  background:var(--raised);border-radius:10px;
+  padding:16px 18px;margin-bottom:10px;
+}
+.phase-box:last-child{margin-bottom:0}
+.phase-box-label{
+  font-family:'DM Mono',monospace;font-size:9px;font-weight:700;
+  text-transform:uppercase;letter-spacing:.1em;
+  color:var(--blue);margin-bottom:10px;
+}
+.phase-box-row{
+  font-size:13px;color:var(--mid);padding:6px 0;
+  border-bottom:1px solid var(--border);line-height:1.5;
+}
+.phase-box-row:last-child{border-bottom:none}
+.phase-box-row strong{color:var(--ink)}
+
+.phase-quote{
+  background:var(--blue-l);border-left:3px solid var(--blue);
+  border-radius:0 10px 10px 0;padding:14px 18px;margin-top:16px;
+}
+.phase-quote p{font-size:14px;color:var(--blue-t);line-height:1.65;font-style:italic}
+
+.phase-step{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:10px;padding:16px 18px;margin-bottom:10px;
+  border-left:3px solid var(--blue);
+}
+.phase-step:last-child{margin-bottom:0}
+.phase-step-label{
+  font-family:'DM Mono',monospace;font-size:9px;font-weight:700;
+  text-transform:uppercase;letter-spacing:.08em;color:var(--blue);margin-bottom:7px;
+}
+.phase-step p{font-size:13px;color:var(--mid);line-height:1.65}
+
+.outcome-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}
+.outcome-tile{
+  background:var(--blue-l);border:1px solid #a8c8f0;
+  border-radius:10px;padding:14px 16px;text-align:center;
+}
+.outcome-num{font-family:'DM Mono',monospace;font-size:22px;font-weight:600;color:var(--metric);line-height:1.1}
+.outcome-lbl{font-size:11px;color:var(--blue-t);margin-top:4px;opacity:.85}
+
+/* ── PROJECTS ── */
+.proj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.proj-card{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:var(--r);padding:24px;
+  transition:border-color .2s,box-shadow .2s;text-decoration:none;display:block;
+  box-shadow:0 1px 3px rgba(13,59,104,.06);
+}
+.proj-card:hover{border-color:var(--blue-b);box-shadow:0 4px 14px rgba(13,59,104,.1);text-decoration:none}
+.proj-icon{
+  width:38px;height:38px;border-radius:9px;
+  background:var(--blue-l);border:1px solid var(--blue-b);
+  display:flex;align-items:center;justify-content:center;margin-bottom:14px;
+}
+.proj-icon svg{width:17px;height:17px;stroke:var(--blue-t);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.proj-name{font-size:15px;font-weight:500;color:var(--ink);margin-bottom:7px}
+.proj-desc{font-size:13px;color:var(--mid);line-height:1.6;margin-bottom:14px}
+.proj-stack{display:flex;flex-wrap:wrap;gap:4px}
+.pill{
+  font-family:'DM Mono',monospace;font-size:9px;font-weight:500;
+  padding:2px 8px;border-radius:4px;
+  background:var(--raised);color:var(--soft);
+  border:1px solid var(--border);
+  letter-spacing:.03em;text-transform:uppercase;
+}
+
+/* ── DISCOVERY CARD ── */
+.discovery-card{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:var(--r);padding:28px 30px;
+  box-shadow:0 1px 4px rgba(13,59,104,.07);
+}
+.disc-grid{display:grid;grid-template-columns:2fr 1fr;gap:28px;margin-top:18px}
+.disc-findings{display:flex;flex-direction:column;gap:8px;margin-top:14px}
+.disc-f{
+  font-size:14px;color:var(--mid);padding:9px 13px;
+  background:var(--raised);border-radius:7px;
+  display:flex;gap:9px;align-items:flex-start;line-height:1.55;
+}
+.disc-dot{width:5px;height:5px;border-radius:50%;background:var(--blue);margin-top:6px;flex-shrink:0}
+.disc-stats{display:flex;flex-direction:column;gap:10px}
+.disc-stat{text-align:center;padding:16px 14px;background:var(--raised);border-radius:9px}
+.disc-sn{font-family:'DM Mono',monospace;font-size:24px;font-weight:600;color:var(--metric);line-height:1.2}
+.disc-sl{font-size:11px;color:var(--soft);margin-top:3px}
+.mvp-pills{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px;padding-top:16px;border-top:1px solid var(--border)}
+.mvp-p{
+  font-size:12px;padding:5px 12px;border-radius:6px;
+  background:var(--blue-l);color:var(--blue-t);border:1px solid var(--blue-b);
+}
+
+/* ── SKILLS ── */
+.skills-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.sk-card{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:var(--r);padding:20px 22px;
+  box-shadow:0 1px 3px rgba(13,59,104,.06);
+}
+.sk-cat{
+  font-family:'DM Mono',monospace;font-size:10px;font-weight:700;
+  text-transform:uppercase;letter-spacing:.1em;color:var(--blue);margin-bottom:12px;
+}
+.sk-pills{display:flex;flex-wrap:wrap;gap:6px}
+.sk-pill{
+  font-size:12px;padding:4px 11px;border-radius:5px;
+  background:var(--raised);color:var(--mid);
+  border:1px solid var(--border);
+}
+
+/* ── CONTACT ── */
+.contact-band{
+  display:flex;align-items:center;justify-content:space-between;
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:var(--r);padding:32px 36px;flex-wrap:wrap;gap:18px;
+  box-shadow:0 1px 4px rgba(13,59,104,.07);
+}
+.contact-name{font-family:'DM Serif Display',serif;font-size:26px;margin-bottom:5px;color:var(--ink)}
+.contact-sub{font-size:13px;color:var(--mid)}
+.contact-links{display:flex;gap:9px;flex-wrap:wrap}
+.c-btn{
+  font-size:13px;font-weight:500;padding:9px 18px;border-radius:8px;
+  text-decoration:none;transition:all .15s;border:1px solid transparent;
+}
+.c-btn-dark{background:var(--ink);color:#fff;border-color:var(--ink)}
+.c-btn-out{background:var(--surface);color:var(--ink);border-color:var(--border-hover)}
+.c-btn:hover{opacity:.8;text-decoration:none}
+
+/* ── FOOTER ── */
+footer{
+  border-top:1px solid var(--border);padding:30px 24px;
+  text-align:center;font-family:'DM Mono',monospace;
+  font-size:11px;color:var(--soft);letter-spacing:.05em;
+}
+
+/* ── RESPONSIVE ── */
+@media(max-width:768px){
+  .metrics{grid-template-columns:repeat(2,1fr)}
+  .proj-grid{grid-template-columns:1fr}
+  .skills-grid{grid-template-columns:1fr}
+  .disc-grid{grid-template-columns:1fr}
+  .wc-detail-grid{grid-template-columns:1fr}
+  .nav-links .nav-link{display:none}
+  .hero{padding:60px 0 52px}
+  .phase-two-col{grid-template-columns:1fr}
+  .phase-head{padding:15px 20px}
+  .phase-body{padding:4px 20px 22px}
+  .amazon-hero-bar{padding:22px 22px 18px}
+  .outcome-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:480px){
+  .metrics{grid-template-columns:1fr 1fr}
+  .hero-name{font-size:40px}
+  .outcome-grid{grid-template-columns:1fr}
+}
+
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <span class="nav-logo">apurv.adarsh</span>
+    <div class="nav-links">
+      <span class="nav-link" onclick="document.getElementById('work').scrollIntoView({behavior:'smooth'})">Work</span>
+      <span class="nav-link" onclick="document.getElementById('builds').scrollIntoView({behavior:'smooth'})">Builds</span>
+      <span class="nav-link" onclick="document.getElementById('skills').scrollIntoView({behavior:'smooth'})">Skills</span>
+      <a class="nav-cta" href="mailto:apurvadarsh3483@gmail.com">Get in touch</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-kicker">Available now &nbsp;·&nbsp; India + Germany</div>
+    <h1 class="hero-name">Apurv <em>Adarsh</em></h1>
+    <p class="hero-role">Product Manager — Internal Tools · Ops Automation · GenAI</p>
+    <p class="hero-bio">
+      Ex-Amazon PM intern (Munich, Pan-EU retail). Ex-engineer (DXC, 4 years). <strong>HHL Leipzig MBA.</strong>
+      I build analytics pipelines, workflow systems, and GenAI-assisted products that ops teams actually adopt —
+      and I measure adoption, not just delivery.
+    </p>
+    <div class="metrics">
+      <div class="m-card">
+        <div class="m-num">+30%</div>
+        <div class="m-label">Forecast accuracy<br>Overstock KPI system</div>
+      </div>
+      <div class="m-card">
+        <div class="m-num">35→5 min</div>
+        <div class="m-label">Banner build time<br>GenAI RAG tool</div>
+      </div>
+      <div class="m-card">
+        <div class="m-num">4 → 30+</div>
+        <div class="m-label">Stakeholder adoption<br>Dashboard rollout</div>
+      </div>
+      <div class="m-card">
+        <div class="m-num">~30 min</div>
+        <div class="m-label">Saved per user/day<br>Receipt automation</div>
+      </div>
+    </div>
+    <div class="hero-actions">
+      <span class="btn btn-dark" onclick="document.getElementById('work').scrollIntoView({behavior:'smooth'})">View case studies</span>
+      <a class="btn btn-outline" href="https://linkedin.com/in/apurv-adarsh" target="_blank">LinkedIn ↗</a>
+      <a class="btn btn-outline" href="https://github.com/apurv912" target="_blank">GitHub ↗</a>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section class="section" id="work">
+    <div class="sec-head">
+      <span class="sec-label">Case studies</span>
+      <span class="sec-count">4 projects</span>
+    </div>
+    <div class="work-stack">
+
+      <!-- Card 1 — DEEP DIVE CASE STUDY -->
+      <div class="amazon-card">
+
+        <!-- Case study hero bar -->
+        <div class="amazon-hero-bar">
+          <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:12px;">
+            <div>
+              <div class="wc-tags" style="margin-bottom:10px;">
+                <span class="amazon-badge">Amazon — Monitors Team · Deep Dive</span>
+                <span class="tag t-type" style="font-size:11px;">Analytics · KPI Design · Decision Workflow</span>
+              </div>
+              <div class="amazon-title">Overstock Prediction System</div>
+              <p class="amazon-desc">By the time Amazon's retail system flagged a monitor SKU as unhealthy, it had already entered markdown. I reframed this as a decision-quality problem, reverse-engineered how expert vendor managers made decisions, and built a phased end-to-end prediction workflow adopted across 30+ stakeholders in 5 Pan-EU markets.</p>
+            </div>
+          </div>
+          <!-- Metric strip -->
+          <div class="amazon-metrics">
+            <div class="am-stat"><div class="am-sn">+30%</div><div class="am-sl">forecast accuracy</div></div>
+            <div class="am-stat"><div class="am-sn">−10–15%</div><div class="am-sl">discount spend</div></div>
+            <div class="am-stat"><div class="am-sn">4 → 30+</div><div class="am-sl">stakeholders</div></div>
+            <div class="am-stat"><div class="am-sn">3–4 hrs</div><div class="am-sl">manual work cut</div></div>
+            <div class="am-stat"><div class="am-sn">6→8/10</div><div class="am-sl">SKUs predicted</div></div>
+          </div>
+        </div>
+
+        <!-- Phases -->
+        <div>
+
+          <!-- Phase 01 -->
+          <div class="phase-row"><div class="phase-head" onclick="togglePhase('p1')">
+              <span class="phase-num">01</span>
+              <span class="phase-title">Context — The Team and the Problem Space</span>
+              <span class="phase-meta">Pan-EU · 5 markets · Brand Specialists &amp; Vendor Managers</span>
+              <span id="p1-chev" class="phase-chev">▼</span>
+            </div>
+            <div id="p1" class="phase-body">
+              <div class="phase-two-col">
+                <div>
+                  <p class="phase-narrative" style="margin-bottom:12px;">The Monitors team at Amazon Retail managed vendor relationships for monitor products across <strong style="color:var(--ink);">5 Pan-EU markets</strong>, operating from Germany. Brand Specialists and Vendor Managers worked directly with vendors to optimise product flow — handling procurement deals, managing overstock through vendor-funded discounts, and running promotional activities to move inventory.</p>
+                  <p class="phase-narrative" style="margin-bottom:12px;">Their core job was to keep products selling efficiently. When a SKU showed overstock risk, they would negotiate vendor discounts, arrange promotions, or flag for transshipment. The quality of these interventions depended entirely on <strong style="color:var(--ink);">how early they could identify risk</strong> — and how accurate their read of that risk was.</p>
+                  <p class="phase-narrative">The problem was upstream. By the time the retail system flagged a SKU as "unhealthy," the window for cheap intervention had already closed. The team was reactive by design because the tooling gave them no alternative.</p>
+                </div>
+                <div style="display:flex;flex-direction:column;gap:8px;">
+                  <div class="phase-box">
+                    <div class="phase-box-label">Team structure</div>
+                    <div class="phase-box-row"><strong style="color:var(--ink);">Brand Specialists</strong> — vendor relationships, promotional planning</div>
+                    <div class="phase-box-row"><strong style="color:var(--ink);">Vendor Managers</strong> — commercial deals, discount negotiation</div>
+                    <div class="phase-box-row"><strong style="color:var(--ink);">Coverage</strong> — 5 Pan-EU markets managed from Germany</div>
+                  </div>
+                  <div class="phase-box">
+                    <div class="phase-box-label">Cost of late detection</div>
+                    <div class="phase-box-row">CP-minus markdowns — sell at a loss to clear stock</div>
+                    <div class="phase-box-row">Disposal markdowns — product past viable sale date</div>
+                    <div class="phase-box-row">Missed vendor negotiation windows — avoidable with earlier signal</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phase 02 -->
+          <div class="phase-row"><div class="phase-head" onclick="togglePhase('p2')">
+              <span class="phase-num">02</span>
+              <span class="phase-title">The Problem — Fragmented Data, Late Signals</span>
+              <span class="phase-meta">Decision-quality gap · 3–4 hrs manual work/week</span>
+              <span id="p2-chev" class="phase-chev">▼</span>
+            </div>
+            <div id="p2" class="phase-body">
+              <div class="phase-two-col">
+                <div>
+                  <p class="phase-narrative" style="margin-bottom:12px;">Every week before the Monday WBR, one Brand Specialist spent <strong style="color:var(--ink);">3–4 hours</strong> manually pulling monitor-specific data from Amazon's retail engine, running Excel analysis, identifying the top 5 SKUs at risk, and compiling a report for the WBR discussion.</p>
+                  <p class="phase-narrative" style="margin-bottom:12px;">The existing system flagged products as "unhealthy" — but the healthy/unhealthy binary was too coarse. <strong style="color:var(--ink);">A SKU with high unhealthy stock but a strong sell-through rate was actually fine.</strong> A SKU with moderate unhealthy stock but weak sell-through was a ticking clock. The existing signal couldn't tell the difference.</p>
+                  <p class="phase-narrative" style="margin-bottom:12px;">The relevant data existed — weeks of cover, sell-through rate, purchase order timing, unhealthy stock units — but it lived in separate places. No one had combined it into a single predictive signal. Brand Specialists and Vendor Managers weren't data analysts. They needed a decision, not a dataset.</p>
+                  <div class="phase-quote">
+                    <p>"I saw this as a decision-quality problem, not a reporting problem. The data was there. The structure wasn't."</p>
+                  </div>
+                </div>
+                <div style="display:flex;flex-direction:column;gap:8px;">
+                  <div class="phase-box">
+                    <div class="phase-box-label">Old weekly process</div>
+                    <div class="phase-box-row">1 BS spends 3–4 hrs pulling &amp; cleaning data manually</div>
+                    <div class="phase-box-row">Excel analysis → top 5 at-risk SKUs identified</div>
+                    <div class="phase-box-row">Report presented at Monday WBR</div>
+                    <div class="phase-box-row">SKUs often already in markdown before action taken</div>
+                  </div>
+                  <div class="phase-box">
+                    <div class="phase-box-label">What the signals missed</div>
+                    <div class="phase-box-row">Healthy/unhealthy binary ignored sell-through velocity</div>
+                    <div class="phase-box-row">Weeks of cover not combined with PO pipeline</div>
+                    <div class="phase-box-row">Top-5 view — everything else invisible until crisis</div>
+                    <div class="phase-box-row">No predictive confidence score — just a status flag</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phase 03 -->
+          <div class="phase-row"><div class="phase-head" onclick="togglePhase('p3')">
+              <span class="phase-num">03</span>
+              <span class="phase-title">Discovery — Mapping the Decision Logic</span>
+              <span class="phase-meta">Wiki deep-dive · Stakeholder interviews · BI collaboration · Beta validation</span>
+              <span id="p3-chev" class="phase-chev">▼</span>
+            </div>
+            <div id="p3" class="phase-body">
+              <div class="phase-two-col">
+                <div>
+                  <p class="phase-narrative" style="margin-bottom:12px;"><strong style="color:var(--ink);">Step 1 — Self-education first.</strong> Before talking to anyone, I went through Amazon's internal wiki and data documentation to understand the retail system, available metrics, and how inventory flow actually worked. I didn't walk into stakeholder conversations blind.</p>
+                  <p class="phase-narrative" style="margin-bottom:12px;"><strong style="color:var(--ink);">Step 2 — Observe the existing workflow.</strong> I sat with Brand Specialists and Vendor Managers to understand how they made decisions. The key question I asked: "After you see the WBR report, what other metrics do you check to validate it?" Their sequential mental validation process — checking weeks of cover, sell-through, PO data in order — became the foundation of the formula.</p>
+                  <p class="phase-narrative" style="margin-bottom:12px;"><strong style="color:var(--ink);">Step 3 — Validate with historical data.</strong> I pulled a historical sample and tested whether past decisions had been accurate using the existing signals. They hadn't — which confirmed the problem was real and the direction was right.</p>
+                  <p class="phase-narrative" style="margin-bottom:12px;"><strong style="color:var(--ink);">Step 4 — Map available data with BI.</strong> I sat with the BI team to catalogue every metric available in the retail engine — including a macro-level overstock prediction model that existed for Amazon-wide use but had never been adapted for team-level decisions.</p>
+                  <p class="phase-narrative"><strong style="color:var(--ink);">Step 5 — Beta test before scaling.</strong> I ran weekly beta predictions alongside the existing manual process for 3–4 weeks, comparing my predictions against actual outcomes. Accuracy improved from 6/10 to 8/10 SKUs correctly predicted. Only then did I move to automation.</p>
+                </div>
+                <div style="display:flex;flex-direction:column;gap:8px;">
+                  <div class="phase-box">
+                    <div class="phase-box-label">The core insight</div>
+                    <p style="font-size:12px;color:var(--mid);line-height:1.55;">I didn't invent new signals. I mapped the validation process that experienced vendor managers were already doing in their heads, converted it into a weighted formula, and made that judgment available to the whole team automatically.</p>
+                  </div>
+                  <div class="phase-box">
+                    <div class="phase-box-label">Beta validation result</div>
+                    <div class="phase-box-row">Week 1–2: formula calibrated against historical data</div>
+                    <div class="phase-box-row">Week 3: accuracy matched existing manual process</div>
+                    <div class="phase-box-row">Week 4: accuracy exceeded manual — 8/10 SKUs correctly predicted vs 6/10 before</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phase 04 -->
+          <div class="phase-row"><div class="phase-head" onclick="togglePhase('p4')">
+              <span class="phase-num">04</span>
+              <span class="phase-title">The Build — Three Deliberate Phases</span>
+              <span class="phase-meta">Excel VBA → SQL + QuickSight → Automated newsletter</span>
+              <span id="p4-chev" class="phase-chev">▼</span>
+            </div>
+            <div id="p4" class="phase-body">
+              <div class="phase-two-col">
+                <div>
+                  <p class="phase-narrative" style="margin-bottom:16px;">I deliberately staged the build in three phases. The team needed to trust the signal before we automated action on it. Shipping the full automated system before proving accuracy would have created business risk at scale.</p>
+                  <div style="display:flex;flex-direction:column;gap:10px;">
+                    <div class="phase-step">
+                      <div class="phase-step-label">PHASE 1 — PROVE THE SIGNAL</div>
+                      <p style="font-size:13px;color:var(--mid);line-height:1.6;">Built the Overstock Probability formula in Excel with VBA automation to generate the first reports. Chose Excel VBA deliberately — fastest way to prove the signal worked without a full engineering investment.</p>
+                    </div>
+                    <div class="phase-step">
+                      <div class="phase-step-label">PHASE 2 — SCALE WITH SQL</div>
+                      <p style="font-size:13px;color:var(--mid);line-height:1.6;">Once the signal was validated, rewrote the workflow using SQL queries pulling directly from Amazon's retail data pipeline into QuickSight. Filterable by country and brand. Eliminated the VBA dependency and made the report scalable across the full team.</p>
+                    </div>
+                    <div class="phase-step">
+                      <div class="phase-step-label">PHASE 3 — CLOSE THE ACTION LOOP</div>
+                      <p style="font-size:13px;color:var(--mid);line-height:1.6;">Automated newsletter delivered before each Monday WBR. SKUs categorised into high/medium/low risk with specific action recommendations. Google Sheet auto-created for flagged SKUs with named ownership — accountability visible to senior management. Actions reviewed in the following WBR, closing the loop from prediction to outcome.</p>
+                    </div>
+                  </div>
+                </div>
+                <div style="display:flex;flex-direction:column;gap:8px;">
+                  <div class="phase-box">
+                    <div class="phase-box-label">What the workflow delivered</div>
+                    <div class="phase-box-row">Filter by country &amp; brand — most at-risk markets visible instantly</div>
+                    <div class="phase-box-row">High / medium / low risk tiers with suggested actions</div>
+                    <div class="phase-box-row">Year-on-year and week-on-week trend graphs</div>
+                    <div class="phase-box-row">Automated newsletter in inbox before Monday WBR</div>
+                    <div class="phase-box-row">Named SKU ownership → accountability loop to senior management</div>
+                  </div>
+                  <div class="phase-box">
+                    <div class="phase-box-label">Deliberately deferred</div>
+                    <div class="phase-box-row">AI chatbot for junior employee decision support</div>
+                    <div class="phase-box-row">Automated vendor email alerts — too risky before signal was proven</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phase 05 -->
+          <div class="phase-row"><div class="phase-head" onclick="togglePhase('p5')">
+              <span class="phase-num">05</span>
+              <span class="phase-title">Outcomes — What Actually Changed</span>
+              <span class="phase-meta">Before &amp; after · Numbers · P&amp;L impact</span>
+              <span id="p5-chev" class="phase-chev">▼</span>
+            </div>
+            <div id="p5" class="phase-body">
+              <div class="phase-two-col">
+                <div>
+                  <p class="phase-narrative" style="margin-bottom:14px;"><strong style="color:var(--ink);">Before:</strong> One Brand Specialist spent 3–4 hours every Monday morning manually pulling data, running Excel analysis, and compiling a top-5 overstock report. Decisions in the WBR were reactive — the team was discussing SKUs that had already entered markdown.</p>
+                  <p class="phase-narrative" style="margin-bottom:18px;"><strong style="color:var(--ink);">After:</strong> Monday WBR arrived with a pre-built automated report in every relevant team member's inbox. Decision accuracy improved by ~30%. Actions were assigned, tracked, and reviewed in a closed loop. Senior management had visibility into who acted and when. Discount spend on at-risk SKUs dropped 10–15% through earlier vendor intervention.</p>
+                  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;">
+                    <div class="outcome-tile">
+                      <div class="outcome-num">+30%</div>
+                      <div class="outcome-lbl">forecast accuracy</div>
+                    </div>
+                    <div class="outcome-tile">
+                      <div class="outcome-num">−10–15%</div>
+                      <div class="outcome-lbl">discount spend</div>
+                    </div>
+                    <div class="outcome-tile">
+                      <div class="outcome-num">4 → 30+</div>
+                      <div class="outcome-lbl">stakeholders</div>
+                    </div>
+                  </div>
+                </div>
+                <div style="display:flex;flex-direction:column;gap:8px;">
+                  <div class="phase-box">
+                    <div class="phase-box-label">Full outcome summary</div>
+                    <div class="phase-box-row">Overstock prediction accuracy: 6/10 → 8/10 SKUs correctly identified</div>
+                    <div class="phase-box-row">Discount spend on at-risk SKUs reduced 10–15%</div>
+                    <div class="phase-box-row">3–4 hrs manual weekly reporting eliminated entirely</div>
+                    <div class="phase-box-row">Adoption: 4 → 30+ stakeholders across Monitors + PC super-team</div>
+                    <div class="phase-box-row">Named SKU ownership created accountability loop visible to senior management</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phase 06 -->
+          <div class="phase-row"><div class="phase-head" onclick="togglePhase('p6')">
+              <span class="phase-num">06</span>
+              <span class="phase-title">What I'd Do Differently</span>
+              <span class="phase-meta">PM maturity · Honest reflection</span>
+              <span id="p6-chev" class="phase-chev">▼</span>
+            </div>
+            <div id="p6" class="phase-body">
+              <div style="max-width:640px;">
+                <p class="phase-narrative" style="margin-bottom:14px;">I'd go to the BI team first. The retail stakeholders knew their workflow but they didn't know what was technically possible. I discovered mid-discovery that a macro-level version of what I was building already existed in the system for Amazon-wide use.</p>
+                <p class="phase-narrative" style="margin-bottom:18px;">If I'd known that on day one, I could have adapted it faster rather than designing from scratch. The retail team's limited technical knowledge constrained the early conversations. The BI team unlocked the possibility space — I should have gone there first.</p>
+                <div style="background:var(--raised);border-radius:8px;padding:16px 18px;border-left:3px solid var(--border);">
+                  <div class="det-label" style="margin-bottom:8px;">The principle I took forward</div>
+                  <p style="font-size:13px;color:var(--mid);line-height:1.65;">In discovery, always map what's technically possible before mapping what users want. Users tell you the problem. Engineers tell you the solution space. You need both before you can design the right path.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="work-card">
+        <div class="wc-top">
+          <div style="flex:1">
+            <div class="wc-tags">
+              <span class="tag t-co-am">Global E-commerce Co.</span>
+              <span class="tag t-type">GenAI · RAG · Product Build</span>
+            </div>
+            <div class="wc-title">GenAI / RAG Deal-Banner Automation</div>
+            <p class="wc-desc">Banner creation was slow, inconsistent, and expensive at scale. QA outcomes varied across brands with no systematic control. I owned the full PRD, model tradeoffs, retrieval design, guardrails, and phased rollout.</p>
+          </div>
+          <span class="wc-arrow" onclick="toggleCard('c2',this)">↓</span>
+        </div>
+        <div class="wc-metrics">
+          <div class="wc-m"><span class="wc-mn">35→5 min</span><span class="wc-ml">build time per asset</span></div>
+          <div class="wc-m"><span class="wc-mn">−40–50%</span><span class="wc-ml">cost per banner</span></div>
+          <div class="wc-m"><span class="wc-mn">80–85%</span><span class="wc-ml">QA pass rate (from 65–70%)</span></div>
+          <div class="wc-m"><span class="wc-mn">3 → 30+</span><span class="wc-ml">users scaled</span></div>
+        </div>
+        <div class="wc-detail" id="c2">
+          <div class="wc-detail-grid">
+            <div>
+              <div class="phase-box-label">What I owned</div>
+              <div class="det-body" style="margin-bottom:16px">PRD + workflow design, model tradeoff decisions (quality / latency / cost), retrieval grounding strategy, guardrails design, eval criteria, rollout plan across brands.</div>
+              <div class="phase-box-label">What I did</div>
+              <div class="det-body"><ul>
+                <li>Baselined time, cost, QA pass rate, and adoption before building anything</li>
+                <li>Designed GenAI + retrieval workflow — grounding outputs in approved templates and brand rules</li>
+                <li>Defined eval criteria aligned to QA, iterated on quality checks with users</li>
+                <li>Phased rollout: 1 brand pilot → 5 brands → 30+ users</li>
+                <li>Fixed a data-leak issue with the security team mid-rollout without pausing adoption</li>
+              </ul></div>
+            </div>
+            <div>
+              <div class="phase-box-label">Tradeoffs managed</div>
+              <div class="risk-list">
+                <div class="risk-item">Quality vs latency vs cost → retrieval grounding + hard constraints on model outputs</div>
+                <div class="risk-item">Hallucination risk → guardrails + template-pinning + human review step retained</div>
+                <div class="risk-item">Adoption trust → "options not answers" UX framing + QA-aligned acceptance criteria</div>
+                <div class="risk-item">Privacy/compliance → sanitised inputs/outputs, limited data exposure surface</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="work-card">
+        <div class="wc-top">
+          <div style="flex:1">
+            <div class="wc-tags">
+              <span class="tag t-co-am">Global E-commerce Co.</span>
+              <span class="tag t-type">Workflow Automation · Ops</span>
+            </div>
+            <div class="wc-title">Email / Receipt Ingestion → Daily Digest</div>
+            <p class="wc-desc">Manual processing of inbound emails and receipts was error-prone, time-consuming, and had no audit trail. I owned the pipeline design, failure-mode handling, and the "rules-based over AI" product decision.</p>
+          </div>
+          <span class="wc-arrow" onclick="toggleCard('c3',this)">↓</span>
+        </div>
+        <div class="wc-metrics">
+          <div class="wc-m"><span class="wc-mn">~30 min</span><span class="wc-ml">saved per user/day</span></div>
+          <div class="wc-m"><span class="wc-mn">3 → 30–40</span><span class="wc-ml">users scaled</span></div>
+        </div>
+        <div class="wc-detail" id="c3">
+          <div class="wc-detail-grid">
+            <div>
+              <div class="phase-box-label">What I owned</div>
+              <div class="det-body" style="margin-bottom:16px">Workflow schema (ingestion → extraction → validation → routing), failure-mode handling, daily digest format design, adoption plan.</div>
+              <div class="phase-box-label">What I did</div>
+              <div class="det-body"><ul>
+                <li>Designed the full ingestion pipeline with explicit failure modes and fallback paths</li>
+                <li>Automated end-of-day digest format matched to existing team operating rhythm</li>
+                <li>Deliberately chose rules-based over AI — prototype testing showed equivalent accuracy at lower cost and complexity</li>
+                <li>Iterated on exception patterns and user feedback post-launch</li>
+              </ul></div>
+            </div>
+            <div>
+              <div class="phase-box-label">Tradeoffs managed</div>
+              <div class="risk-list">
+                <div class="risk-item">AI vs rules-based → chose rules: equivalent accuracy, faster build, lower cost, easier to debug</div>
+                <div class="risk-item">Parsing edge cases → validation layer + manual review fallback for low-confidence extractions</div>
+                <div class="risk-item">Reliability → audit logs + retry patterns built in from the start</div>
+                <div class="risk-item">Adoption → digest format mapped exactly to how teams already closed their day</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="work-card">
+        <div class="wc-top">
+          <div style="flex:1">
+            <div class="wc-tags">
+              <span class="tag t-co-dxc">DXC Technology</span>
+              <span class="tag t-type">Enterprise · Agile Delivery</span>
+            </div>
+            <div class="wc-title">Acting Product Owner — €2M Modernisation Roadmap</div>
+            <p class="wc-desc">A legacy billing system modernisation for a national broadband programme was stalled by competing stakeholder priorities and painful deployments. I stepped into the PO role and rebuilt delivery predictability.</p>
+          </div>
+          <span class="wc-arrow" onclick="toggleCard('c4',this)">↓</span>
+        </div>
+        <div class="wc-metrics">
+          <div class="wc-m"><span class="wc-mn">50+</span><span class="wc-ml">requirements consolidated</span></div>
+          <div class="wc-m"><span class="wc-mn">+30%</span><span class="wc-ml">sprint velocity</span></div>
+          <div class="wc-m"><span class="wc-mn">−40%</span><span class="wc-ml">deploy time</span></div>
+          <div class="wc-m"><span class="wc-mn">−30%</span><span class="wc-ml">system errors</span></div>
+        </div>
+        <div class="wc-detail" id="c4">
+          <div class="wc-detail-grid">
+            <div>
+              <div class="phase-box-label">What I owned</div>
+              <div class="det-body" style="margin-bottom:16px">Requirement alignment across 50+ stakeholders (3 business units), backlog prioritisation, sprint inputs, UAT/release readiness gates. Java + Camunda + ActiveMQ architecture context.</div>
+              <div class="phase-box-label">What I did</div>
+              <div class="det-body"><ul>
+                <li>Consolidated 50+ requirements into epics and a phased €2M roadmap</li>
+                <li>Rebuilt refinement and acceptance criteria processes to increase sprint predictability</li>
+                <li>Drove UAT and release gates to eliminate late-stage surprises</li>
+                <li>Partnered on CI/CD improvements and cross-vendor integration delivery</li>
+                <li>Restored project credibility after a team-lead gap — delivery stabilised within 3 months</li>
+              </ul></div>
+            </div>
+            <div>
+              <div class="phase-box-label">Tradeoffs managed</div>
+              <div class="risk-list">
+                <div class="risk-item">Scope pressure vs delivery → phased roadmap with explicit tradeoffs negotiated with BT CIO</div>
+                <div class="risk-item">Speed vs quality → acceptance criteria + UAT gates as non-negotiable release conditions</div>
+                <div class="risk-item">Dependency risk → early alignment across BT, QA vendor, and offshore delivery teams</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PR OS DISCOVERY -->
+  <section class="section">
+    <div class="sec-head">
+      <span class="sec-label">Active research — PR OS</span>
+      <span class="sec-count">India-first B2B SaaS · Ongoing</span>
+    </div>
+    <div class="discovery-card">
+      <div class="wc-tags">
+        <span class="tag" style="background:var(--purple-l);color:var(--purple-t)">Product Discovery</span>
+        <span class="tag t-type">India · B2B · Workflow OS</span>
+        <span class="tag" style="background:var(--teal-l);color:var(--teal-t);border:1px solid var(--teal-b)">Active</span>
+      </div>
+      <div class="wc-title" style="margin-top:10px">PR OS — India-First PR Workflow System</div>
+      <div class="disc-grid">
+        <div>
+          <p style="font-size:13px;color:var(--mid);line-height:1.7">
+            A workflow system of record for India PR agencies — journalist CRM, follow-up queue, interaction timeline, and manager dashboard. The real pain isn't content creation; it's fragmented follow-ups across email, phone, and WhatsApp with no shared system of record. The wedge is operational discipline, not AI writing.
+          </p>
+          <div class="det-label" style="margin-top:14px">Key discovery findings</div>
+          <div class="disc-findings">
+            <div class="disc-f"><span class="disc-dot"></span>~30 journalists/week across 3–4 campaigns; reply rates 0–10 of every 100 outreach attempts</div>
+            <div class="disc-f"><span class="disc-dot"></span>Follow-ups tracked in memory and email drafts — most journalists need 3+ touchpoints before responding</div>
+            <div class="disc-f"><span class="disc-dot"></span>Channel sequence: email → phone → WhatsApp. No tool is built for this three-channel India reality</div>
+            <div class="disc-f"><span class="disc-dot"></span>Managers have zero live view of ownership or campaign stage without calling the executive directly</div>
+            <div class="disc-f"><span class="disc-dot"></span>Weekly reports rebuilt manually from email threads every Friday — takes 1–2 hours per person</div>
+          </div>
+        </div>
+        <div class="disc-stats">
+          <div class="disc-stat">
+            <div class="disc-sn">14-day</div>
+            <div class="disc-sl">pilot design ready</div>
+          </div>
+          <div class="disc-stat">
+            <div class="disc-sn">₹1k/mo</div>
+            <div class="disc-sl">indicated WTP per user</div>
+          </div>
+          <div class="disc-stat">
+            <div class="disc-sn">8</div>
+            <div class="disc-sl">data objects defined</div>
+          </div>
+        </div>
+      </div>
+      <div class="det-label" style="margin-top:18px">MVP scope</div>
+      <div class="mvp-pills">
+        <span class="mvp-p">Journalist CRM</span>
+        <span class="mvp-p">Interaction timeline</span>
+        <span class="mvp-p">Daily follow-up queue</span>
+        <span class="mvp-p">Fast call logging</span>
+        <span class="mvp-p">Templates</span>
+        <span class="mvp-p">Campaign view</span>
+        <span class="mvp-p">Manager dashboard</span>
+        <span class="mvp-p">Reporting export</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- GITHUB BUILDS -->
+  <section class="section" id="builds">
+    <div class="sec-head">
+      <span class="sec-label">GitHub builds</span>
+      <span class="sec-count">github.com/apurv912</span>
+    </div>
+    <div class="proj-grid">
+
+      <a class="proj-card" href="https://github.com/apurv912/AI_Projects" target="_blank">
+        <div class="proj-icon">
+          <svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+        </div>
+        <div class="proj-name">AI Projects / DocuRAG</div>
+        <p class="proj-desc">RAG microbuild ladder: citations, 2-stage reranking, eval scorecards, telemetry ops dashboard, safety guardrails. Each build ships with acceptance criteria and eval proof.</p>
+        <div class="proj-stack">
+          <span class="pill">Python</span><span class="pill">RAG</span><span class="pill">Streamlit</span><span class="pill">Guardrails</span><span class="pill">Evals</span>
+        </div>
+      </a>
+
+      <a class="proj-card" href="https://github.com/apurv912/comm-ops-os" target="_blank">
+        <div class="proj-icon">
+          <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <div class="proj-name">ComOps — Comm Ops OS</div>
+        <p class="proj-desc">Local-first outreach workflow OS. Interaction CRM, extraction pipeline (Interaction → ExtractedFields → Task), template manager. SQLite + Streamlit.</p>
+        <div class="proj-stack">
+          <span class="pill">Python</span><span class="pill">SQLite</span><span class="pill">Streamlit</span><span class="pill">SQLModel</span>
+        </div>
+      </a>
+
+      <a class="proj-card" href="https://github.com/apurv912/bloom-pr" target="_blank">
+        <div class="proj-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        </div>
+        <div class="proj-name">Bloom PR</div>
+        <p class="proj-desc">React + TypeScript front-end prototype for the PR OS product. Built with Vite, shadcn/ui, Tailwind, and Playwright tests.</p>
+        <div class="proj-stack">
+          <span class="pill">TypeScript</span><span class="pill">React</span><span class="pill">Tailwind</span><span class="pill">shadcn/ui</span>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section" id="skills">
+    <div class="sec-head">
+      <span class="sec-label">Skills &amp; tools</span>
+    </div>
+    <div class="skills-grid">
+      <div class="sk-card">
+        <div class="sk-cat">Product</div>
+        <div class="sk-pills">
+          <span class="sk-pill">Discovery &amp; Research</span>
+          <span class="sk-pill">PRDs &amp; User Stories</span>
+          <span class="sk-pill">JTBD</span>
+          <span class="sk-pill">Personas</span>
+          <span class="sk-pill">RICE Prioritisation</span>
+          <span class="sk-pill">Roadmapping</span>
+          <span class="sk-pill">A/B Testing</span>
+          <span class="sk-pill">Go-to-Market</span>
+        </div>
+      </div>
+      <div class="sk-card">
+        <div class="sk-cat">AI / GenAI</div>
+        <div class="sk-pills">
+          <span class="sk-pill">RAG Pipelines</span>
+          <span class="sk-pill">Prompt Engineering</span>
+          <span class="sk-pill">Model Evaluation</span>
+          <span class="sk-pill">Guardrails</span>
+          <span class="sk-pill">LangChain</span>
+          <span class="sk-pill">Amazon Bedrock</span>
+          <span class="sk-pill">n8n</span>
+        </div>
+      </div>
+      <div class="sk-card">
+        <div class="sk-cat">Analytics</div>
+        <div class="sk-pills">
+          <span class="sk-pill">SQL</span>
+          <span class="sk-pill">KPI Design</span>
+          <span class="sk-pill">Funnel Analysis</span>
+          <span class="sk-pill">Dashboarding</span>
+          <span class="sk-pill">GA4</span>
+          <span class="sk-pill">QuickSight</span>
+          <span class="sk-pill">Mixpanel</span>
+        </div>
+      </div>
+      <div class="sk-card">
+        <div class="sk-cat">Delivery &amp; Tools</div>
+        <div class="sk-pills">
+          <span class="sk-pill">Agile / Scrum</span>
+          <span class="sk-pill">Stakeholder Mgmt</span>
+          <span class="sk-pill">Backlog Governance</span>
+          <span class="sk-pill">Jira</span>
+          <span class="sk-pill">Figma</span>
+          <span class="sk-pill">Confluence</span>
+          <span class="sk-pill">Postman</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section">
+    <div class="contact-band">
+      <div>
+        <div class="contact-name">Apurv Adarsh</div>
+        <div class="contact-sub">Available immediately · India + Germany · PM / TPM / Product Ops</div>
+      </div>
+      <div class="contact-links">
+        <a class="c-btn c-btn-dark" href="mailto:apurvadarsh3483@gmail.com">Email me</a>
+        <a class="c-btn c-btn-out" href="https://linkedin.com/in/apurv-adarsh" target="_blank">LinkedIn ↗</a>
+        <a class="c-btn c-btn-out" href="https://github.com/apurv912" target="_blank">GitHub ↗</a>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <span>Apurv Adarsh · Product Manager · apurvadarsh3483@gmail.com</span>
+</footer>
+
+<script>
+function toggleCard(id, arrow) {
+  var el = document.getElementById(id);
+  var isOpen = el.classList.contains('open');
+  document.querySelectorAll('.wc-detail').forEach(function(e){e.classList.remove('open')});
+  document.querySelectorAll('.wc-arrow').forEach(function(a){a.textContent='↓'});
+  if (!isOpen) {
+    el.classList.add('open');
+    arrow.textContent = '↑';
+  }
+}
+function togglePhase(id) {
+  var body = document.getElementById(id);
+  var chev = document.getElementById(id+'-chev');
+  var isOpen = body.style.display === 'block';
+  body.style.display = isOpen ? 'none' : 'block';
+  if (chev) chev.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+}
+</script>
+</body>
+</html>
